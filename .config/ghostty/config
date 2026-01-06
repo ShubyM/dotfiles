@@ -1,0 +1,41 @@
+# Ghostty config matching macOS Terminal.app "Basic" profile
+# Font settings
+font-family = SF Mono
+font-style = Regular
+font-size = 11
+font-feature = -liga
+font-feature = -calt
+
+# Cursor - block style like Terminal.app
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+# Colors - matching Terminal.app Basic profile
+background = #161616
+foreground = #ffffff
+cursor-color = #ffffff
+
+# ANSI color palette (0-15)
+# Normal colors
+palette = 0=#000000
+palette = 1=#c23621
+palette = 2=#25bc24
+palette = 3=#adad27
+palette = 4=#492ee1
+palette = 5=#d338d3
+palette = 6=#33bbc8
+palette = 7=#cbcccd
+
+# Bright colors
+palette = 8=#818383
+palette = 9=#fc391f
+palette = 10=#31e722
+palette = 11=#eaec23
+palette = 12=#5833ff
+palette = 13=#f935f8
+palette = 14=#14f0f0
+palette = 15=#e9ebeb
+
+# Use Option as Meta key (matching Terminal.app setting)
+macos-option-as-alt = true
