@@ -21,21 +21,11 @@ link_file() {
     ln -sf "$src" "$dest"
 }
 
-# Shell configs
-link_file "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
-link_file "$DOTFILES_DIR/.zprofile" "$HOME/.zprofile"
-link_file "$DOTFILES_DIR/.bash_profile" "$HOME/.bash_profile"
-
-# Editor configs
-link_file "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"
+# Tmux
 link_file "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 
-# Git config
-link_file "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
-
-# .config directory configs
+# Neovim
 mkdir -p "$HOME/.config"
 link_file "$DOTFILES_DIR/.config/nvim" "$HOME/.config/nvim"
-link_file "$DOTFILES_DIR/.config/ghostty" "$HOME/.config/ghostty"
 
-echo "Done! You may need to restart your shell or run 'source ~/.zshrc'"
+echo "Done!"
