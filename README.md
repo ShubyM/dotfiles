@@ -1,11 +1,12 @@
 # Dotfiles
 
-My tmux and neovim configs.
+My tmux, neovim, and ghostty configs.
 
 ## Contents
 
 - `.tmux.conf` - Tmux configuration
 - `.config/nvim/` - Neovim configuration
+- `.config/ghostty/` - Ghostty terminal configuration
 
 ## Installation
 

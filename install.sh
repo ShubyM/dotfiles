@@ -24,8 +24,9 @@ link_file() {
 # Tmux
 link_file "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 
-# Neovim
+# Neovim & Ghostty
 mkdir -p "$HOME/.config"
 link_file "$DOTFILES_DIR/.config/nvim" "$HOME/.config/nvim"
+link_file "$DOTFILES_DIR/.config/ghostty" "$HOME/.config/ghostty"
 
 echo "Done!"
