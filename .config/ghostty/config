@@ -1,6 +1,6 @@
 # Ghostty config matching macOS Terminal.app "Basic" profile
 # Font settings
-font-family = SF Mono
+font-family = Iosevka Extended
 font-style = Regular
 font-size = 11
 font-feature = -liga

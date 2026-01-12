@@ -109,7 +109,16 @@ return {
         vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format({ async = true }) end, opts)
         vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
         vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+        vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
+        vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
       end
+
+      -- Show diagnostic message inline and on hover
+      vim.diagnostic.config({
+        virtual_text = { spacing = 4, prefix = "●" },
+        float = { border = "rounded", source = true },
+        severity_sort = true,
+      })
 
       -- Configure LSP servers using new API
       vim.lsp.config.gopls = {

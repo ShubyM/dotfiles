@@ -27,6 +27,7 @@ opt.cursorline = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
+opt.guifont = "Iosevka Extended:h14"
 
 -- Backspace
 opt.backspace = "indent,eol,start"

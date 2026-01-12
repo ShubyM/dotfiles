@@ -58,3 +58,8 @@ vim.api.nvim_create_user_command("Restart", function()
 end, { desc = "Restart Neovim" })
 
 vim.api.nvim_create_user_command("R", "source $MYVIMRC", { desc = "Reload config" })
+
+-- Focus file explorer
+keymap("n", "<leader>ff", function()
+  require("nvim-tree.api").tree.focus()
+end, { desc = "Focus file explorer" })
