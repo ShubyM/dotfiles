@@ -4,11 +4,7 @@ local opts = { noremap = true, silent = true }
 -- Exit insert mode with jj
 keymap("i", "jj", "<Esc>", opts)
 
--- Window navigation (matching tmux)
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+-- Window navigation handled by vim-tmux-navigator plugin
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)

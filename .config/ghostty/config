@@ -1,4 +1,4 @@
-# Ghostty config matching macOS Terminal.app "Basic" profile
+# Ghostty config - GitHub Dark theme
 # Font settings
 font-family = Iosevka Extended
 font-style = Regular
@@ -6,36 +6,44 @@ font-size = 11
 font-feature = -liga
 font-feature = -calt
 
-# Cursor - block style like Terminal.app
+# Cursor - block style
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
-# Colors - matching Terminal.app Basic profile
-background = #161616
-foreground = #ffffff
-cursor-color = #ffffff
+# Colors - GitHub Dark theme
+background = #0d1117
+foreground = #c9d1d9
+cursor-color = #c9d1d9
+selection-background = #388bfd
+selection-foreground = #ffffff
 
-# ANSI color palette (0-15)
+# ANSI color palette (0-15) - GitHub Dark
 # Normal colors
-palette = 0=#000000
-palette = 1=#c23621
-palette = 2=#25bc24
-palette = 3=#adad27
-palette = 4=#492ee1
-palette = 5=#d338d3
-palette = 6=#33bbc8
-palette = 7=#cbcccd
+palette = 0=#484f58
+palette = 1=#f85149
+palette = 2=#3fb950
+palette = 3=#d29922
+palette = 4=#58a6ff
+palette = 5=#bc8cff
+palette = 6=#39c5cf
+palette = 7=#b1bac4
 
 # Bright colors
-palette = 8=#818383
-palette = 9=#fc391f
-palette = 10=#31e722
-palette = 11=#eaec23
-palette = 12=#5833ff
-palette = 13=#f935f8
-palette = 14=#14f0f0
-palette = 15=#e9ebeb
+palette = 8=#6e7681
+palette = 9=#ff7b72
+palette = 10=#56d364
+palette = 11=#e3b341
+palette = 12=#79c0ff
+palette = 13=#d2a8ff
+palette = 14=#56d4dd
+palette = 15=#f0f6fc
 
-# Use Option as Meta key (matching Terminal.app setting)
+# Use Option as Meta key
 macos-option-as-alt = true
+
+# Remove window padding gaps
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = true
+window-padding-color = extend
