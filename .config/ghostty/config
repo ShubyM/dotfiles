@@ -9,13 +9,12 @@ cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
-# Colors - Dark Transparent Theme (Stock-like)
+# Colors - Solid Charcoal Theme (Stock Pro-like)
 background = #171717
-background-opacity = 0.85
-background-blur = true
-foreground = #c9d1d9
-cursor-color = #c9d1d9
-selection-background = #388bfd
+foreground = #ececec
+bold-color = #ffffff
+cursor-color = #4d4d4d
+selection-background = #414141
 selection-foreground = #ffffff
 
 # ANSI color palette (0-15) - GitHub Dark
