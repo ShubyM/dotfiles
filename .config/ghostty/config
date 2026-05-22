@@ -10,7 +10,7 @@ cursor-style-blink = false
 shell-integration-features = no-cursor
 
 # Colors - Solid Charcoal Theme (Stock Pro-like)
-background = #1b1b1b
+background = #1e1e1e
 foreground = #ececec
 bold-color = #ffffff
 cursor-color = #4d4d4d
