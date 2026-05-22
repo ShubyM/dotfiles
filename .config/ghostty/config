@@ -17,26 +17,26 @@ cursor-color = #4d4d4d
 selection-background = #414141
 selection-foreground = #ffffff
 
-# ANSI color palette (0-15) - GitHub Dark
+# ANSI color palette (0-15) - Stock macOS Terminal
 # Normal colors
-palette = 0=#484f58
-palette = 1=#f85149
-palette = 2=#3fb950
-palette = 3=#d29922
-palette = 4=#58a6ff
-palette = 5=#bc8cff
-palette = 6=#39c5cf
-palette = 7=#b1bac4
+palette = 0=#000000
+palette = 1=#c23621
+palette = 2=#25bc24
+palette = 3=#adad27
+palette = 4=#492ee1
+palette = 5=#d338d3
+palette = 6=#33bbc8
+palette = 7=#cbcccb
 
 # Bright colors
-palette = 8=#6e7681
-palette = 9=#ff7b72
-palette = 10=#56d364
-palette = 11=#e3b341
-palette = 12=#79c0ff
-palette = 13=#d2a8ff
-palette = 14=#56d4dd
-palette = 15=#f0f6fc
+palette = 8=#818383
+palette = 9=#fc391f
+palette = 10=#31e722
+palette = 11=#eaec23
+palette = 12=#5833ff
+palette = 13=#f935f8
+palette = 14=#14f0f3
+palette = 15=#ffffff
 
 # Use Option as Meta key
 macos-option-as-alt = true
