@@ -23,10 +23,22 @@ link_file() {
 
 # Tmux
 link_file "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
+link_file "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 
 # Neovim & Ghostty
 mkdir -p "$HOME/.config"
 link_file "$DOTFILES_DIR/.config/nvim" "$HOME/.config/nvim"
 link_file "$DOTFILES_DIR/.config/ghostty" "$HOME/.config/ghostty"
+
+# VS Code
+mkdir -p "$HOME/Library/Application Support/Code/User"
+mkdir -p "$HOME/.vscode/extensions"
+link_file "$DOTFILES_DIR/.config/Code/User/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+rm -rf "$HOME/.vscode/extensions/shubym.pigeon-frost-theme-0.0.1"
+cp -R "$DOTFILES_DIR/.config/vscode/themes/pigeon-frost" "$HOME/.vscode/extensions/shubym.pigeon-frost-theme-0.0.1"
+
+# Wallpaper
+mkdir -p "$HOME/Pictures"
+link_file "$DOTFILES_DIR/.config/wallpapers/back.png" "$HOME/Pictures/back.png"
 
 echo "Done!"

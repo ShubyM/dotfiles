@@ -65,8 +65,8 @@ opt.mouse = "a"
 -- Show matching brackets
 opt.showmatch = true
 
--- Command line height
-opt.cmdheight = 1
+-- Keep the editor statusline tight against the tmux bar.
+opt.cmdheight = 0
 
 -- Better display for messages
 opt.shortmess:append("c")
@@ -77,4 +77,3 @@ opt.showtabline = 2
 -- Global statusline
 opt.laststatus = 3
 vim.opt.showtabline = 0
-

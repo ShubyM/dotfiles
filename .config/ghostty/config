@@ -1,4 +1,4 @@
-# Ghostty config - GitHub Dark theme
+# Ghostty config - Pigeon Frost theme
 # Font settings
 font-family = "SF Mono"
 font-size = 12
@@ -9,42 +9,42 @@ cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
-# Colors - Dark Transparent Theme (Stock-like)
+# Colors - Pigeon Frost theme
 background = #171717
-background-opacity = 0.85
+background-opacity = 0.72
 background-blur = true
-foreground = #ececec
-bold-color = #ffffff
-cursor-color = #4d4d4d
-selection-background = #414141
-selection-foreground = #ffffff
+foreground = #d8d3c8
+bold-color = #ebe6dc
+cursor-color = #d6a84f
+selection-background = #3a3248
+selection-foreground = #ebe6dc
 
-# ANSI color palette (0-15) - Stock macOS Terminal
+# ANSI color palette (0-15) - pigeon body, neck, and foot accents
 # Normal colors
-palette = 0=#000000
-palette = 1=#c23621
-palette = 2=#25bc24
-palette = 3=#adad27
-palette = 4=#492ee1
-palette = 5=#d338d3
-palette = 6=#33bbc8
-palette = 7=#cbcccb
+palette = 0=#111315
+palette = 1=#d97868
+palette = 2=#2fbf9f
+palette = 3=#d6a84f
+palette = 4=#53616b
+palette = 5=#7d5ac7
+palette = 6=#1f8f9a
+palette = 7=#d8d3c8
 
 # Bright colors
-palette = 8=#818383
-palette = 9=#fc391f
-palette = 10=#31e722
-palette = 11=#eaec23
-palette = 12=#5833ff
-palette = 13=#f935f8
-palette = 14=#14f0f3
-palette = 15=#ffffff
+palette = 8=#7d858c
+palette = 9=#e58b7d
+palette = 10=#6fd8bd
+palette = 11=#e3c36f
+palette = 12=#7f95a3
+palette = 13=#b58cff
+palette = 14=#56c5cf
+palette = 15=#ebe6dc
 
 # Use Option as Meta key
 macos-option-as-alt = true
 
-# Remove window padding gaps
-window-padding-x = 0
-window-padding-y = 0
+# Keep content aligned inside the rounded macOS window edge
+window-padding-x = 6
+window-padding-y = 4
 window-padding-balance = true
 window-padding-color = extend

@@ -1,0 +1,22 @@
+{
+  "name": "pigeon-frost-theme",
+  "displayName": "Pigeon Frost Theme",
+  "description": "A transparent-friendly pigeon-inspired theme for VS Code.",
+  "version": "0.0.1",
+  "publisher": "shubym",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Pigeon Frost",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pigeon-frost-color-theme.json"
+      }
+    ]
+  }
+}
