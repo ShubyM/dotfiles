@@ -41,4 +41,9 @@ cp -R "$DOTFILES_DIR/.config/vscode/themes/pigeon-frost" "$HOME/.vscode/extensio
 mkdir -p "$HOME/Pictures"
 link_file "$DOTFILES_DIR/.config/wallpapers/back.png" "$HOME/Pictures/back.png"
 
+# Codex pets
+mkdir -p "$HOME/.codex/pets"
+rm -rf "$HOME/.codex/pets/pigeon"
+cp -R "$DOTFILES_DIR/.codex/pets/pigeon" "$HOME/.codex/pets/pigeon"
+
 echo "Done!"
