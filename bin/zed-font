@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+"""Switch Zed font families without changing sizes, colors, or key bindings."""
+
+import argparse
+import datetime
+import json
+import os
+from pathlib import Path
+import re
+import shutil
+import tempfile
+
+
+PRESETS = {
+    "stock": (".ZedMono", ".ZedSans"),
+    "apple": ("SF Mono", ".SystemUIFont"),
+    # An approximation; Superlogical's demo font has not been confirmed.
+    "rex": ("JetBrainsMono Nerd Font Mono", ".SystemUIFont"),
+}
+
+
+def default_settings_path():
+    if os.name == "nt":
+        config_root = Path(os.environ.get("APPDATA", Path.home() / "AppData/Roaming"))
+        return config_root / "Zed/settings.json"
+    config_root = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config"))
+    return config_root / "zed/settings.json"
+
+
+def read_jsonc(source):
+    # Match strings first so URLs and comment markers inside strings survive.
+    source = re.sub(
+        r'"(?:\\.|[^"\\])*"|//[^\n]*|/\*[\s\S]*?\*/',
+        lambda match: match[0] if match[0].startswith('"') else " ",
+        source,
+    )
+    source = re.sub(
+        r'"(?:\\.|[^"\\])*"|,(?=\s*[}\]])',
+        lambda match: match[0] if match[0].startswith('"') else "",
+        source,
+    )
+    return json.loads(source)
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Try stock Zed, Apple Terminal, or a Rex-inspired font pair. "
+        "The Rex preset is an approximation. Sizes and theme stay the same."
+    )
+    parser.add_argument("preset", choices=PRESETS)
+    parser.add_argument("--settings", type=Path, default=default_settings_path())
+    args = parser.parse_args()
+    path = args.settings.expanduser().resolve()
+    source = path.read_text()
+    settings = read_jsonc(source)
+    mono, sans = PRESETS[args.preset]
+    settings["buffer_font_family"] = mono
+    settings["ui_font_family"] = sans
+    settings.setdefault("terminal", {})["font_family"] = mono
+    stamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S-%f")
+    backup = path.parent / "backups" / (stamp + "-font-" + args.preset)
+    backup.mkdir(parents=True)
+    shutil.copy2(path, backup / path.name)
+    comment = source.splitlines()[0] + "\n" if source.startswith("//") else ""
+    fd, temp_name = tempfile.mkstemp(prefix=".zed-font-", dir=path.parent)
+    try:
+        with os.fdopen(fd, "w") as target:
+            target.write(comment + json.dumps(settings, indent=2) + "\n")
+        os.chmod(temp_name, path.stat().st_mode & 0o777)
+        os.replace(temp_name, path)
+    finally:
+        if os.path.exists(temp_name):
+            os.unlink(temp_name)
+    label = " (Rex-inspired approximation)" if args.preset == "rex" else ""
+    print(f"Zed: {mono} editor, {sans} UI{label}. Sizes and theme preserved.")
+
+
+if __name__ == "__main__":
+    main()

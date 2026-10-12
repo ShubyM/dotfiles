@@ -1,0 +1,81 @@
+// Space is the leader in normal mode. Double Shift opens the palette everywhere.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "command_palette::Toggle",
+      "cmd-shift-d": [
+        "action::Sequence",
+        [
+          "outline_panel::ToggleFocus",
+          "git::Diff"
+        ]
+      ]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j j": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space p": "command_palette::Toggle",
+      "space /": "pane::DeploySearch",
+      "space e": "project_panel::ToggleFocus",
+      "space b": "tab_switcher::Toggle",
+      "space g d": [
+        "action::Sequence",
+        [
+          "outline_panel::ToggleFocus",
+          "git::Diff"
+        ]
+      ],
+      "space g b": "git::CompareWithBranch",
+      "space g g": "git_panel::ToggleFocus",
+      "space g o": "outline_panel::ToggleFocus",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "] h": "editor::GoToHunk",
+      "[ h": "editor::GoToPreviousHunk",
+      "space f s": "workspace::Save"
+    }
+  },
+  {
+    "context": "EmptyPane",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space p": "command_palette::Toggle",
+      "space /": "pane::DeploySearch",
+      "space e": "project_panel::ToggleFocus",
+      "space b": "tab_switcher::Toggle",
+      "space g d": [
+        "action::Sequence",
+        [
+          "outline_panel::ToggleFocus",
+          "git::Diff"
+        ]
+      ],
+      "space g b": "git::CompareWithBranch",
+      "space g g": "git_panel::ToggleFocus",
+      "space g o": "outline_panel::ToggleFocus",
+      "space f s": "workspace::Save"
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight"
+    }
+  }
+]

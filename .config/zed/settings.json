@@ -1,0 +1,135 @@
+// Stock One Dark text and diff colors with a blurred translucent editor background.
+{
+  "agent": {
+    "default_model": {
+      "provider": "openai-subscribed",
+      "model": "gpt-6-astra",
+      "enable_thinking": true,
+      "effort": "medium"
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    }
+  },
+  "theme": "One Dark",
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 12,
+  "ui_font_family": ".ZedSans",
+  "buffer_font_family": ".ZedMono",
+  "buffer_font_features": {
+    "calt": false,
+    "liga": false,
+    "dlig": false
+  },
+  "ui_font_features": {
+    "calt": false,
+    "liga": false,
+    "dlig": false
+  },
+  "buffer_line_height": {
+    "custom": 1.4
+  },
+  "cursor_blink": false,
+  "soft_wrap": "none",
+  "vertical_scroll_margin": 6,
+  "horizontal_scroll_margin": 6,
+  "relative_line_numbers": "disabled",
+  "use_smartcase_search": true,
+  "vim": {
+    "default_mode": "normal",
+    "use_system_clipboard": "always",
+    "use_smartcase_find": true,
+    "use_regex_search": true,
+    "toggle_relative_line_numbers": false
+  },
+  "diff_view_style": "unified",
+  "git": {
+    "diff_base": "default_branch",
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "git_panel": {
+    "dock": "left",
+    "default_width": 260,
+    "tree_view": true,
+    "group_by": "none",
+    "collapse_untracked_diff": false,
+    "entry_primary_click_action": "project_diff"
+  },
+  "outline_panel": {
+    "dock": "left",
+    "default_width": 260,
+    "multi_buffer_hide_symbols": true
+  },
+  "project_panel": {
+    "dock": "left",
+    "default_width": 260
+  },
+  "which_key": {
+    "enabled": true,
+    "delay_ms": 500
+  },
+  "terminal": {
+    "font_size": 12,
+    "font_features": {
+      "calt": false,
+      "liga": false,
+      "dlig": false
+    },
+    "font_family": ".ZedMono"
+  },
+  "command_aliases": {
+    "diff": "git::Diff",
+    "base": "git::CompareWithBranch",
+    "files": "file_finder::Toggle",
+    "changes": "outline_panel::ToggleFocus"
+  },
+  "languages": {
+    "Python": {
+      "language_servers": [
+        "ty",
+        "ruff"
+      ]
+    }
+  },
+  "lsp": {
+    "ty": {
+      "settings": {
+        "diagnosticMode": "off"
+      }
+    },
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "configurationPreference": "editorFirst",
+          "lint": {
+            "enable": true,
+            "select": [
+              "F6",
+              "F7",
+              "F821",
+              "F822",
+              "F823"
+            ],
+            "extendSelect": []
+          }
+        }
+      }
+    }
+  },
+  "theme_overrides": {
+    "One Dark": {
+      "background.appearance": "blurred",
+      "background": "#282c33b8",
+      "editor.background": "#00000000",
+      "editor.gutter.background": "#00000000",
+      "terminal.background": "#00000000"
+    }
+  }
+}
